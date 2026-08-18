@@ -1,0 +1,32 @@
+/* Legal pages — extends style.css, reuses theme tokens */
+
+.legal-hero{background:var(--bg); color:var(--white); padding:56px 0 68px;}
+.legal-hero .tag{margin-bottom:14px;}
+.legal-hero h1{font-size:clamp(32px,4.5vw,52px); font-weight:900; color:var(--white); margin-bottom:10px;}
+.legal-updated{color:var(--light-muted); font-size:13.5px;}
+
+.legal-toc{display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 0;}
+.legal-toc a{border:1.5px solid rgba(255,255,255,.18); padding:8px 14px; font-size:12.5px; font-weight:600; color:var(--light-muted); text-decoration:none; border-radius:2px;}
+.legal-toc a:hover{border-color:var(--amber); color:var(--amber);}
+
+.legal-wrap{max-width:880px;}
+.legal-content{background:var(--paper); color:var(--ink); border-radius:2px; padding:52px; margin:-40px auto 70px; box-shadow:0 24px 48px rgba(12,18,38,.18); position:relative; z-index:2;}
+.legal-content h2{font-size:21px; margin:36px 0 12px; padding-bottom:10px; border-bottom:2px solid var(--amber-ink); font-weight:700;}
+.legal-content h2:first-child{margin-top:0;}
+.legal-content h3{font-size:16px; margin:22px 0 8px; font-family:var(--font-body); font-weight:700; color:var(--ink);}
+.legal-content p{color:var(--ink-muted); margin:0 0 14px; font-size:15px; line-height:1.7;}
+.legal-content ul{color:var(--ink-muted); font-size:15px; margin:0 0 16px; padding-left:20px; display:grid; gap:6px;}
+.legal-content li{line-height:1.6;}
+.legal-content a{color:var(--rust); font-weight:600; text-decoration:underline;}
+.legal-content strong{color:var(--ink);}
+
+.legal-contact-box{background:var(--paper); border-left:3px solid var(--amber); padding:18px 22px; margin:18px 0 26px; border-radius:2px;}
+.legal-contact-box p{margin:0 0 4px; color:var(--ink); font-size:14.5px;}
+.legal-contact-box p:last-child{margin-bottom:0;}
+
+.legal-note{font-size:13px; color:var(--ink-muted); border-top:1px solid var(--paper-line); padding-top:16px; margin-top:30px;}
+
+@media (max-width:600px){
+  .legal-content{padding:30px 20px; margin-top:-24px;}
+  .legal-hero{padding:44px 0 54px;}
+}
