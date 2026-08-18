@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lighten | Cut Your Debt Payments — Free Eligibility Check</title>
+<link rel="icon" type="image/png" href="aa.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="logo">LIGHTEN</div>
+    <div class="header-right">
+      <a href="tel:07569878787" class="header-phone">07569878787</a>
+      <a href="#qualify" class="btn btn-amber">Free Check</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="tag">FCA Authorised &nbsp;/&nbsp; Free &amp; Confidential</p>
+      <h1>Cut what<br>you owe.<br><span class="hero-highlight">Not what<br>you're worth.</span></h1>
+      <p class="hero-lead">We work with people across the UK to write off up to 81% of unsecured debt and replace it with one payment you can actually afford.</p>
+      <a href="#qualify" class="btn btn-amber lg">See If I Qualify &rarr;</a>
+    </div>
+
+    <div class="hero-ladder">
+      <div class="ladder-label">Typical debt reduction</div>
+      <div class="ladder">
+        <div class="ladder-row">
+          <span class="ladder-tag">Before</span>
+          <div class="ladder-track"><div class="ladder-fill" style="width:100%"></div></div>
+          <span class="ladder-val">100%</span>
+        </div>
+        <div class="ladder-row">
+          <span class="ladder-tag">After*</span>
+          <div class="ladder-track"><div class="ladder-fill ladder-fill--after" id="afterFill" style="width:0%"></div></div>
+          <span class="ladder-val" id="afterVal">0%</span>
+        </div>
+      </div>
+      <div class="ladder-note">*Example only — based on write-offs achieved by our insolvency practice partners. Individual results vary.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STAT STRIP ============ -->
+<section class="stat-strip">
+  <div class="wrap stat-grid">
+    <div class="stat"><span class="stat-num">5,200+</span><span class="stat-label">people helped last year</span></div>
+    <div class="stat"><span class="stat-num">£0</span><span class="stat-label">for your first assessment</span></div>
+    <div class="stat"><span class="stat-num">8</span><span class="stat-label">debt solutions compared</span></div>
+    <div class="stat"><span class="stat-num">~10min</span><span class="stat-label">to check eligibility</span></div>
+  </div>
+</section>
+
+<!-- ============ BENEFITS ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="benefit-row">
+      <div class="benefit">
+        <h3>Stop the calls</h3>
+        <p>Creditor calls and letters stop once your plan is agreed.</p>
+      </div>
+      <div class="benefit">
+        <h3>One payment</h3>
+        <p>Everything folds into a single, affordable monthly amount.</p>
+      </div>
+      <div class="benefit">
+        <h3>Frozen interest</h3>
+        <p>Interest and charges can be frozen on qualifying plans.</p>
+      </div>
+      <div class="benefit">
+        <h3>Real advice</h3>
+        <p>A specialist talks you through every option — no pressure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MONEYHELPER CALLOUT ============ -->
+<section class="callout">
+  <div class="wrap callout-inner">
+    <span class="callout-mark">i</span>
+    <p><strong>MoneyHelper</strong> is a free, independent service set up by the Government offering debt counselling and credit information — worth knowing about before you speak to anyone else.</p>
+  </div>
+</section>
+
+<!-- ============ DEBTS WE HELP WITH ============ -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="section-title">Debts we can help with</h2>
+    <div class="tag-cloud">
+      <span>Credit Cards</span><span>Store Cards</span><span>Personal Loans</span>
+      <span>Overdrafts</span><span>Catalogue Debt</span><span>Utility Arrears</span>
+      <span>Payday Loans</span><span>County Court Judgments</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUTIONS ACCORDION ============ -->
+<section class="section dark">
+  <div class="wrap">
+    <h2 class="section-title light">Every option, explained plainly</h2>
+    <p class="section-sub light">Tap a solution to see how it works, and the honest pros and cons.</p>
+    <div class="accordion" id="accordion"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section">
+  <div class="wrap about-inner">
+    <div>
+      <h2 class="section-title">About Lighten</h2>
+      <p>Lighten is a trading style of Lighten Financial Intermediaries Ltd. We give advice only to help you make an informed decision, then refer you to the right provider for your circumstances.</p>
+      <p>We don't charge fees for advice. If a solution involves a fee, our partner will tell you upfront, before you commit to anything.</p>
+      <p>Lighten Financial Intermediaries Ltd is authorised and regulated by the Financial Conduct Authority (FRN 000000).</p>
+    </div>
+    <div class="contact-block">
+      <span class="contact-label">Contact</span>
+      <a href="tel:08000000000">0800 000 0000</a>
+      <a href="mailto:hello@lighten.co.uk">hello@lighten.co.uk</a>
+      <span>Lighten House, Dock Street, Leeds, LS1 4AB</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEAD FORM ============ -->
+<section class="section dark" id="qualify">
+  <div class="wrap qualify-inner">
+    <div class="qualify-copy">
+      <h2 class="section-title light">Check if you qualify</h2>
+      <p class="light-muted">A few quick questions. No obligation, completely confidential.</p>
+      <ul class="check-list">
+        <li>Free, no-obligation check</li>
+        <li>Your data stays confidential</li>
+        <li>A specialist calls you back</li>
+      </ul>
+    </div>
+
+    <form class="lead-form" id="leadForm">
+      <div class="step-indicator" id="stepIndicator">
+        <span class="step-dot active" data-n="1">1</span>
+        <span class="step-dot" data-n="2">2</span>
+        <span class="step-dot" data-n="3">3</span>
+        <span class="step-dot" data-n="4">4</span>
+        <span class="step-dot" data-n="5">5</span>
+        <span class="step-dot" data-n="6">6</span>
+        <span class="step-dot" data-n="7">7</span>
+      </div>
+
+      <!-- Step 1 -->
+      <div class="form-step active" data-step="1">
+        <label>How much do you owe in total?</label>
+        <div class="option-grid" data-field="debtAmount">
+          <button type="button" class="option" data-value="Under £5,000">Under &pound;5,000</button>
+          <button type="button" class="option" data-value="£5,000–£15,000">&pound;5,000&ndash;&pound;15,000</button>
+          <button type="button" class="option" data-value="£15,000–£30,000">&pound;15,000&ndash;&pound;30,000</button>
+          <button type="button" class="option" data-value="Over £30,000">Over &pound;30,000</button>
+        </div>
+        <div class="form-info">
+          <h4>Why are we asking this question?</h4>
+          <p>This allows us to determine what solutions you may be eligible for. Include unsecured debts, like missed payments to HMRC, council tax arrears, overdrafts and CCJs. Secured debts, such as a mortgage, car finance, or secured loans, can't usually be included in a formal legal debt solution.</p>
+          <p class="safe-note">&#128274; Your information is safe, secure &amp; confidential</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-step" data-step="2">
+        <label>What's your employment status?</label>
+        <div class="option-grid" data-field="employment">
+          <button type="button" class="option" data-value="Employed">Employed</button>
+          <button type="button" class="option" data-value="Self-employed">Self-employed</button>
+          <button type="button" class="option" data-value="Retired">Retired</button>
+          <button type="button" class="option" data-value="Not working">Not working</button>
+        </div>
+        <div class="form-info">
+          <h4>Why are we asking this question?</h4>
+          <p>This information helps us tailor advice to your current situation.</p>
+          <p class="safe-note">&#128274; Your information is safe, secure &amp; confidential</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="form-step" data-step="3">
+        <label>What are you hoping to achieve?</label>
+        <div class="option-grid" data-field="goal">
+          <button type="button" class="option" data-value="Write off unsecured debt">Write off unsecured debt</button>
+          <button type="button" class="option" data-value="One affordable monthly payment">One affordable monthly payment</button>
+          <button type="button" class="option" data-value="Keep my home and car safe">Keep my home and car safe</button>
+          <button type="button" class="option" data-value="Pause interest and charges">Pause interest and charges</button>
+          <button type="button" class="option" data-value="Avoid legal action">Avoid legal action</button>
+          <button type="button" class="option" data-value="All of the above">I want all of the above</button>
+        </div>
+        <div class="form-info">
+          <h4>Why are we asking this question?</h4>
+          <p>This helps your adviser guide you on how to achieve your goal, alongside advice on all the debt solutions available to you.</p>
+          <p class="safe-note">&#128274; Your information is safe, secure &amp; confidential</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="form-step" data-step="4">
+        <label>Which debt are you most worried about?</label>
+        <div class="option-grid" data-field="worriedDebt">
+          <button type="button" class="option" data-value="Credit card">Credit card</button>
+          <button type="button" class="option" data-value="Loan">Loan</button>
+          <button type="button" class="option" data-value="Overdraft">Overdraft</button>
+          <button type="button" class="option" data-value="Store card">Store card</button>
+          <button type="button" class="option" data-value="Council tax">Council tax</button>
+          <button type="button" class="option" data-value="Other">Other</button>
+        </div>
+        <div class="form-info">
+          <h4>Why are we asking this question?</h4>
+          <p>This lets us tailor our advice to your current situation.</p>
+          <p class="safe-note">&#128274; Your information is safe, secure &amp; confidential</p>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="form-step" data-step="5">
+        <label>What's your biggest concern about your debt?</label>
+        <div class="option-grid" data-field="concern">
+          <button type="button" class="option" data-value="Unable to pay bills">Unable to pay bills</button>
+          <button type="button" class="option" data-value="Creditor harassment">Creditor harassment</button>
+          <button type="button" class="option" data-value="Reliance on credit cards or loans">Reliance on credit or loans</button>
+          <button type="button" class="option" data-value="Unaffordable repayments">Unaffordable repayments</button>
+          <button type="button" class="option" data-value="Risk of losing my home">Risk of losing my home</button>
+          <button type="button" class="option" data-value="Other">Other</button>
+        </div>
+        <div class="form-info">
+          <h4>Why are we asking this question?</h4>
+          <p>This helps us give the best advice, and helps put your mind at ease.</p>
+          <p class="safe-note">&#128274; Your information is safe, secure &amp; confidential</p>
+        </div>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="form-step" data-step="6">
+        <label>What type of property do you live in?</label>
+        <div class="option-grid" data-field="property">
+          <button type="button" class="option" data-value="Rented">Rented</button>
+          <button type="button" class="option" data-value="Private rented">Private rented</button>
+          <button type="button" class="option" data-value="Living with parents">Living with parents</button>
+          <button type="button" class="option" data-value="Owned">Owned</button>
+        </div>
+        <div class="form-info">
+          <h4>Why are we asking this question?</h4>
+          <p>This helps us give the best advice, and helps put your mind at ease.</p>
+          <p class="safe-note">&#128274; Your information is safe, secure &amp; confidential</p>
+        </div>
+      </div>
+
+      <!-- Step 7 -->
+      <div class="form-step" data-step="7">
+        <label>Where do you live?</label>
+        <div class="option-grid" data-field="location">
+          <button type="button" class="option" data-value="England">England</button>
+          <button type="button" class="option" data-value="Wales">Wales</button>
+          <button type="button" class="option" data-value="Northern Ireland">Northern Ireland</button>
+          <button type="button" class="option" data-value="Scotland">Scotland</button>
+        </div>
+        <div class="form-info">
+          <h4>Why are we asking this question?</h4>
+          <p>Telling us your location lets us offer information about the debt solutions available in your area.</p>
+          <p class="safe-note">&#128274; Your information is safe, secure &amp; confidential</p>
+        </div>
+      </div>
+
+      <!-- Step 8: contact details -->
+      <div class="form-step" data-step="8">
+        <button type="button" class="back-icon-btn" data-back>&#10094;</button>
+        <label>Please enter your details to continue</label>
+        <input type="text" name="fullName" placeholder="Full name" required>
+        <input type="email" name="email" placeholder="Email address" required>
+        <input type="text" name="postcode" placeholder="Postcode" required>
+        <p class="form-note">Please read our <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a> before you proceed.</p>
+        <button type="button" class="btn btn-amber full" id="detailsContinueBtn">Continue</button>
+        <p class="safe-note center">&#128274; Your information is safe, secure &amp; confidential</p>
+      </div>
+
+      <!-- Step 9: phone -->
+      <div class="form-step" data-step="9">
+        <button type="button" class="back-icon-btn" data-back>&#10094;</button>
+        <label><span class="lead-firstname" id="leadFirstName">There,</span> let's see if we could write off your debt.</label>
+        <p class="form-sub">Confirm your details below to find out what options are available to you.</p>
+        <input type="tel" name="phone" placeholder="Eg. 07700 900000" inputmode="tel" pattern="^(\+44|0044|0)[\s\-()]?\d[\d\s\-()]{8,12}$" required>
+        <label class="checkbox-line">
+          <input type="checkbox" required>
+          <span>By selecting this option you are giving your permission to be contacted by telephone, SMS, WhatsApp and email. For information on how we handle your information please see our <a href="#">Privacy Policy</a>.</span>
+        </label>
+        <button type="submit" class="btn btn-amber full">Check If I Qualify</button>
+        <p class="safe-note center">&#128274; Your information is safe, secure &amp; confidential</p>
+      </div>
+
+      <div class="form-step" data-step="success">
+        <div class="success-box">
+          <div class="success-emoji">&#127881;</div>
+          <h3>Congratulations!</h3>
+          <p>You have been shortlisted. One of our advisers will call you shortly to discuss the debt solutions available to you.</p>
+          <p class="safe-note center">&#128274; Your information is safe, secure &amp; confidential</p>
+        </div>
+      </div>
+
+      <div class="form-nav">
+        <button type="button" id="backBtn" class="btn btn-outline small" style="display:none;">&larr; Back</button>
+        <button type="button" id="nextBtn" class="btn btn-amber small">Continue &rarr;</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-disclaimer"><strong>Lighten do not charge any fees for initial advice.</strong> The 81% write-off example was achieved by our partner Insolvency Practices. We are authorised and regulated by the Financial Conduct Authority. Debt solutions may affect your credit rating and may not suit everyone.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Conditions</a>
+      <a href="#">GDPR Policy</a>
+      <a href="#">Complaints</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Lighten Financial Intermediaries Ltd.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
