@@ -9,7 +9,7 @@ function isValidUKPhone(value) {
   return /^(?:\+44|0044|0)\d{10}$/.test(cleaned);
 }
 
-// ====== LADDER ANIMATION ======
+// ====== LADDER ANIMATION ====== 
 window.addEventListener("DOMContentLoaded", () => {
   const afterFill = document.getElementById("afterFill");
   const afterVal = document.getElementById("afterVal");
