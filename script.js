@@ -4,15 +4,11 @@ const API_BASE = window.location.hostname === "localhost" || window.location.hos
 function isValidUKPhone(value) {
   const cleaned = value.replace(/[\s\-().]/g, "");
 
-  // UK mobile:
-  // 07XXXXXXXXX  -> 11 digits
-  // +447XXXXXXXXX -> international format
-  // 00447XXXXXXXXX -> international format
+  
 
   return /^(?:07\d{9}|\+447\d{9}|00447\d{9})$/.test(cleaned);
 }
 
-// ====== LADDER ANIMATION ======
 window.addEventListener("DOMContentLoaded", () => {
   const afterFill = document.getElementById("afterFill");
   const afterVal = document.getElementById("afterVal");
@@ -31,7 +27,6 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// ====== SOLUTIONS DATA ======
 const solutions = [
   {
     id: "dmp", name: "Debt Management Plan",
@@ -206,7 +201,6 @@ function renderAccordion() {
 
 renderAccordion();
 
-// ====== MULTI-STEP LEAD FORM (same logic/fields as main site, different indicator UI) ======
 const form = document.getElementById("leadForm");
 const steps = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "success"];
 let currentStepIndex = 0;
@@ -303,7 +297,6 @@ document.querySelectorAll("[data-back]").forEach(btn => {
   });
 });
 
-// Step 8 -> Step 9: validate contact details, personalize name, move on
 const detailsContinueBtn = document.getElementById("detailsContinueBtn");
 if (detailsContinueBtn) {
   detailsContinueBtn.addEventListener("click", () => {
