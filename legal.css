@@ -3,7 +3,7 @@
 .legal-hero{background:var(--bg); color:var(--white); padding:56px 0 68px;}
 .legal-hero .tag{margin-bottom:14px;}
 .legal-hero h1{font-size:clamp(32px,4.5vw,52px); font-weight:900; color:var(--white); margin-bottom:10px;}
-.legal-updated{color:var(--light-muted); font-size:13.5px;}
+.legal-updated{color:var(--light-muted); font-size:13.5px;} 
 
 .legal-toc{display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 0;}
 .legal-toc a{border:1.5px solid rgba(255,255,255,.18); padding:8px 14px; font-size:12.5px; font-weight:600; color:var(--light-muted); text-decoration:none; border-radius:2px;}
