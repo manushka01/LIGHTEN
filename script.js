@@ -6,10 +6,16 @@ const API_BASE = window.location.hostname === "localhost" || window.location.hos
 // UK phone numbers: local "0XXXXXXXXXX" (11 digits) or international "+44XXXXXXXXXX" (44 + 10 digits)
 function isValidUKPhone(value) {
   const cleaned = value.replace(/[\s\-().]/g, "");
-  return /^(?:\+44|0044|0)\d{10}$/.test(cleaned);
+
+  // UK mobile:
+  // 07XXXXXXXXX  -> 11 digits
+  // +447XXXXXXXXX -> international format
+  // 00447XXXXXXXXX -> international format
+
+  return /^(?:07\d{9}|\+447\d{9}|00447\d{9})$/.test(cleaned);
 }
 
-// ====== LADDER ANIMATION ====== 
+// ====== LADDER ANIMATION ======
 window.addEventListener("DOMContentLoaded", () => {
   const afterFill = document.getElementById("afterFill");
   const afterVal = document.getElementById("afterVal");
@@ -32,40 +38,117 @@ window.addEventListener("DOMContentLoaded", () => {
 const solutions = [
   {
     id: "dmp", name: "Debt Management Plan",
-    body: "An informal repayment agreement between you and your creditors to pay off your debts through one affordable monthly payment.",
-    pros: ["One affordable payment each month", "Flexible if your circumstances change", "Interest & charges may be frozen", "Avoids formal insolvency"],
-    cons: ["All creditors must agree individually", "Freezing interest isn't guaranteed", "Affects your credit file for up to 6 years"]
+    body: "A Debt Management Plan is an informal repayment agreement between you and your creditors to pay all of your debts,Debt management plans are an alternative debt solution to formal arrangements, such as an Individual Voluntary Arrangement or Bankruptcy and available to residents in the United Kingdom.",
+    pros: ["You only pay one affordable payment to the DMP company", "The payment is flexible depending on your circumstances, it can increase or decrease", "Payments can be reduced & interest rates can be frozen by creditors, however, they are not obliged to do this", "Some charities & organisations provide this service free of charge (you can contact the Money Advice Service for more information)"],
+    cons: ["All the creditors need to agree to their individual arrangement for this plan to be effective", "Interest & charges are not guaranteed to be frozen", "Your credit rating is affected as your monthly payments are not contractual","Debt management plans can affect your credit file for a minimum of 6 years, as in most cases you will have defaulted on the original credit agreement terms once you enter into the arrangement"]
   },
-  {
+ {
     id: "iva", name: "IVA",
-    body: "A legally binding agreement to repay what you can afford over a set period, typically 5–6 years, with remaining unsecured debt written off at the end.",
-    pros: ["Legally protects you from creditor action", "Interest & charges are frozen", "Remaining debt written off on completion", "Support from a dedicated team"],
-    cons: ["Creditors don't have to agree to the proposal", "Affects your credit file for 6 years", "Recorded on the public insolvency register"]
-  },
+
+    body: "An IVA (Individual Voluntary Arrangement) is a legally binding agreement between you and your creditors to pay back your debts over a period of time. You agree to make regular payments to an insolvency practitioner, who will divide this money between your creditors. The fees charged are taken from the affordable monthly payment you make over the agreed term of the IVA. An IVA can give you more control of your assets than bankruptcy.",
+
+    pros: [
+      "One realistic and affordable payment over a set period of time",
+      "After successful completion of your IVA unaffordable debt is written off",
+      "Protected legally — after approval, no further action can be taken by creditors and all interest and charges are frozen",
+      "The fees charged are taken from the affordable monthly payment you make over the agreed term",
+      "Interest and charges will stop",
+      "Support from our team who can help you through the journey",
+      "Your expenditure will be reviewed at the start and annually to ensure your payment remains affordable"
+    ],
+
+    cons: [
+      "There are restrictions on the expenditure of a person who enters into an IVA",
+      "Creditors don't have to agree to an IVA proposal so it's not guaranteed",
+      "It affects your credit file for six years",
+      "Your information will be held on the public insolvency register",
+      "There are costs involved with an IVA, deducted from your contributions and detailed fully in your IVA proposal",
+      "If you own property, you may be asked to release equity to pay off debts — a remortgage may attract higher interest, or the IVA may be extended by 12 months if none is available",
+      "If your IVA fails, it may result in Bankruptcy",
+      "If you earn additional income, a percentage of this may need to be paid into the IVA",
+      "Only unsecured debts included within the arrangement may be discharged; unsecured debts not included remain outstanding",
+      "Borrowing any amount over £500 can only be done with the express permission of the Insolvency Practitioner"
+    ]
+},
   {
     id: "ao", name: "Administration Order",
-    body: "A County Court order for people with debts under £5,000 who've had at least one court judgment against them.",
-    pros: ["No upfront cost", "Just one monthly payment into court", "Your home isn't at risk"],
-    cons: ["Only available if debt is below £5,000", "Recorded on a public register", "Credit rating is affected"]
-  },
+
+    body: "Administration orders are arranged by the County Court. Administration orders are only available in England, Wales and Northern Ireland. If you live in Scotland there are other options available to help you deal with your debts. An administration order is legally binding on your creditors and gives you protection from them. The creditors included in the order can't contact you for payment or add any more interest or charges to your debts once the administration order has been approved. To apply for an administration order you need to have less than £5,000 debt in total and have received at least one court judgment.",
+
+    pros: [
+      "There is no upfront cost to you",
+      "You make just one monthly payment into court",
+      "Your home is not at risk"
+    ],
+
+    cons: [
+      "The debt must be below £5,000",
+      "You may have to sell valuable possessions",
+      "Your details are recorded on a Public Register",
+      "Your credit rating will be adversely affected",
+      "The order will be listed on a public insolvency register"
+    ]
+},
   {
     id: "dro", name: "Debt Relief Order",
-    body: "A formal solution for people with little spare income or assets and debts under £50,000.",
-    pros: ["No monthly payments required", "Usually lasts 12 months", "Creditors must stop taking action", "Simple to set up"],
-    cons: ["Affects credit file for 6 years", "Owning assets over £4,000 disqualifies you", "Recorded on a public register"]
-  },
+
+    body: "Debt Relief Orders (DRO) is a formal debt solution designed for people with little or no assets and low income. If you don't own your own home & have little spare income and debts that are less than £50,000 a Debt Relief Order (DRO) could be a way to deal with your debts. It is an alternative debt solution to Bankruptcy or an Individual Voluntary Arrangement and available to residents of England, Wales and Northern Ireland.",
+
+    pros: [
+      "Typically a Debt Relief Order lasts twelve months",
+      "Debt Relief Orders don't require you to make payments into them",
+      "Creditors are stopped from taking any further action against you",
+      "A Debt Relief Order is relatively simple process to start and can be done through various charity organisations"
+    ],
+
+    cons: [
+      "Your credit rating will be affected for six years",
+      "Owning your own property or having assets over £4,000 will stop you entering into a Debt Relief Order",
+      "A Debt Relief Order may be cancelled if you do not comply or if your circumstances change during the 12 month period, for example if you're able to make payments towards you debt(s)",
+      "Entering into a DRO will be recorded on a public register",
+      "If you can afford more than £100 after your monthly essentials have been budgeted for then you will not qualify"
+    ]
+},
   {
     id: "bankruptcy", name: "Bankruptcy",
-    body: "A formal insolvency route where qualifying debts are written off, usually within 12 months.",
-    pros: ["Can be discharged within 12 months", "Frees you from creditor pressure", "Qualifying debts are written off", "Process is completed online"],
-    cons: ["You may lose control of assets", "Affects credit file for 6 years", "Costs £680, can be paid in instalments"]
-  },
-  {
+
+    body: "If you are unable to pay your debts you can apply to make yourself bankrupt. Bankruptcy is a formal insolvency route and can have serious financial implications. Other people can put you into bankruptcy or you can make this choice yourself. It's something to be carefully considered. The three ways you can go bankrupt are: you apply for bankruptcy yourself; an application for bankruptcy from a creditor; by the IVA Supervisor if you fail to meet the terms of your IVA.",
+
+    pros: [
+      "Your Bankruptcy could be discharged within 12 months",
+      "It can free you from the pressure from creditors",
+      "All debts that qualify for bankruptcy are written off",
+      "The stigma of bankruptcy is not what it once was",
+      "The process to make yourself bankrupt is now completed online"
+    ],
+
+    cons: [
+      "You lose control of finances and assets, the official receiver or Trustee appointed on your case will decide what happens to your valuable asset and finances. Your information will be held on a public register",
+      "Under certain circumstances, bankruptcy can affect types of employment",
+      "It will affect your credit file for six years",
+      "Putting yourself into bankruptcy will cost £680, this can be paid in monthly instalments however you will not be afforded the protection of bankruptcy until such time as this is paid",
+      "Depending on if you have proven disposable income and employment status, you may have to pay income payments for up to thirty-six months"
+    ]
+},
+ {
     id: "breathing-space", name: "Breathing Space",
-    body: "Temporary legal protection from creditors while you get debt advice — freezes interest and pauses enforcement action.",
-    pros: ["Freezes most interest, fees & charges", "Pauses enforcement & creditor contact", "Standard option lasts up to 60 days"],
-    cons: ["Only a temporary pause, not a solution", "Must be arranged through debt advice", "Doesn't reduce what you owe"]
-  },
+
+    body: "Breathing Space is a new debt option that gives you temporary protection from the creditors you owe money to if you're struggling with debts. This includes freezing most interest, fees and charges on debts, and pausing most enforcement action and contact from creditors. There are two types of Breathing Space: Standard Breathing Space, which you apply for through debt advice and which lasts for up to 60 days, with a review between days 25 and 35. Mental Health Crisis Breathing Space, which is specifically for people in mental health crisis treatment and can only be applied for with an Approved Mental Health Professional (AMHP). It lasts for the duration of your treatment, plus 30 days.",
+
+    pros: [
+      "Freezes most interest, fees and charges on debts",
+      "Pauses most enforcement action and contact from creditors",
+      "Standard Breathing Space lasts up to 60 days",
+      "Mental Health Crisis Breathing Space lasts for duration of treatment plus 30 days"
+    ],
+
+    cons: [
+      "Only a temporary pause, not a permanent debt solution",
+      "Standard type must be arranged through debt advice",
+      "Mental Health Crisis type can only be applied for via an Approved Mental Health Professional (AMHP)",
+      "Doesn't reduce the amount you owe"
+    ]
+},
   {
     id: "scottish", name: "Scottish Solutions",
     body: "Options such as a Minimal Assets Process (MAP) or Trust Deed, designed specifically for residents of Scotland.",
