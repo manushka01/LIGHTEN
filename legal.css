@@ -1,4 +1,4 @@
-/* Legal pages — extends style.css, reuses theme tokens */
+
 
 .legal-hero{background:var(--bg); color:var(--white); padding:56px 0 68px;} 
 .legal-hero .tag{margin-bottom:14px;}
