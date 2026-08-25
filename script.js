@@ -5,7 +5,7 @@ function isValidUKPhone(value) {
   const cleaned = value.replace(/[\s\-().]/g, "");
 
   
-
+ 
   return /^(?:07\d{9}|\+447\d{9}|00447\d{9})$/.test(cleaned);
 }
 
