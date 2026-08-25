@@ -1,6 +1,6 @@
 /* Legal pages — extends style.css, reuses theme tokens */
 
-.legal-hero{background:var(--bg); color:var(--white); padding:56px 0 68px;}
+.legal-hero{background:var(--bg); color:var(--white); padding:56px 0 68px;} 
 .legal-hero .tag{margin-bottom:14px;}
 .legal-hero h1{font-size:clamp(32px,4.5vw,52px); font-weight:900; color:var(--white); margin-bottom:10px;}
 .legal-updated{color:var(--light-muted); font-size:13.5px;} 
