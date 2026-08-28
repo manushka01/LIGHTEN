@@ -1,11 +1,11 @@
+// ====== CONFIG ======
 const API_BASE = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
   ? "http://localhost:5000"
-  : ""; 
+  : "";
 function isValidUKPhone(value) {
   const cleaned = value.replace(/[\s\-().]/g, "");
 
-  
- 
+
   return /^(?:07\d{9}|\+447\d{9}|00447\d{9})$/.test(cleaned);
 }
 
@@ -199,6 +199,7 @@ function renderAccordion() {
   });
 }
 
+
 renderAccordion();
 
 const form = document.getElementById("leadForm");
@@ -302,10 +303,9 @@ if (detailsContinueBtn) {
   detailsContinueBtn.addEventListener("click", () => {
     const nameVal = form.fullName.value.trim();
     const emailVal = form.email.value.trim();
-    const postcodeVal = form.postcode.value.trim();
 
-    if (!nameVal || !emailVal || !postcodeVal) {
-      alert("Please fill in your name, email and postcode to continue.");
+    if (!nameVal || !emailVal) {
+      alert("Please fill in your name and email to continue.");
       return;
     }
     if (!form.email.checkValidity()) {
@@ -342,7 +342,6 @@ form.addEventListener("submit", async (e) => {
     fullName: form.fullName.value.trim(),
     phone: form.phone.value.trim(),
     email: form.email.value.trim(),
-    postcode: form.postcode.value.trim(),
     debtAmount: answers.debtAmount,
     employment: answers.employment,
     goal: answers.goal,
