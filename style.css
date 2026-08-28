@@ -34,7 +34,8 @@ h1,h2,h3{font-family:var(--font-display); margin:0 0 .3em; line-height:1.02; let
 .btn{display:inline-block; padding:10px 20px; font-weight:700; text-decoration:none; font-size:14.5px; text-transform:uppercase; letter-spacing:.04em; border:2px solid transparent; cursor:pointer; border-radius:2px;}
 .btn-amber{background:var(--amber); color:var(--amber-ink);}
 .btn-amber:hover{background:#ffcb1f;}
-.btn-outline{background:transparent; border-color:var(--paper-line); color:var(--ink);}
+.btn-outline{background:var(--amber); border-color:var(--amber); color:var(--amber-ink);}
+.btn-outline:hover{background:#ffcb1f;}
 .btn.small{padding:12px 20px; font-size:13px;}
 .btn.lg{padding:10px 20px; font-size:16px;}
 .btn.full{width:100%; text-align:center; margin-top:8px;}
