@@ -287,7 +287,6 @@ backBtn.addEventListener("click", () => {
   }
 });
 
-// Back icon buttons on steps 8 and 9
 document.querySelectorAll("[data-back]").forEach(btn => {
   btn.addEventListener("click", () => {
     if (currentStepIndex > 0) {
